@@ -1,4 +1,3 @@
-/*
 #include "stdio.h"
 #include "string.h"
 #include "stdbool.h"
@@ -12,7 +11,7 @@ Uint32 OddReturnNum(Uint32 number);
 
 int main()
 {
-	printf("hello world\n");
+//	printf("hello world\n");
 	Uint32  CurInterger;
 	Uint32 Temporary_variable;
 	Uint32 gCount = 0, Count = 0;
@@ -23,7 +22,7 @@ int main()
 		{
 			continue;
 		}
-		printf("\nCurInterger=%u  ", CurInterger);
+//		printf("\nCurInterger=%u  ", CurInterger); //屏蔽掉打印信息，耗时3秒
 		gCount = 1;
 		// dispose current interger
 		gResultNum = CurInterger;
@@ -32,7 +31,7 @@ int main()
 		{
 			
 			//Temporary_variable = gResultNum;
-			printf("%d--", Temporary_variable);
+//			printf("%d--", Temporary_variable);
 			if (IsEven(Temporary_variable))
 			{
 				gCount++;
@@ -89,8 +88,11 @@ Uint32 OddReturnNum(Uint32 number)
 	num = 3 * number + 1;
 	return num;
 }
-*/
 
+
+/*   
+
+//网站上找的代码，耗时1秒
 #include <stdio.h>
 
 int main(int argc, char **argv)
@@ -100,9 +102,10 @@ int main(int argc, char **argv)
 	int i;
 	unsigned long j;
 
-	//for (i = 1; i <= 1000000; i++)
-	//{
-		i=j = 500;
+	for (i = 1; i <= 1000000; i++)
+	{
+		printf("i = %d\n", i);
+		j = i;
 		int this_terms = 1;
 
 		while (j != 1)
@@ -124,9 +127,10 @@ int main(int argc, char **argv)
 				j = 3 * j + 1;
 			}
 		}
-	//}
+	}
 
 	printf("longest: %d (%d)\n", longest, terms);
 	getchar();
 	return 0;
 }
+*/
